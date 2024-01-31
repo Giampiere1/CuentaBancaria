@@ -51,7 +51,8 @@ public class Util {
                 document.getString("TypeCode"),
                 document.getString("AccountNumber"),
                 document.getString("AccountTypeCode"),
-                document.get("Balance").toString());
+                document.get("Balance").toString(),
+                document.get("NumberTransaction").toString());
     }
 
     public static List<TransactionDto> mapToTransactionDto(List<Document> documents) {

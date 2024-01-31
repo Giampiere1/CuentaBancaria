@@ -2,6 +2,7 @@ package com.datantt.cuentabancaria.infraestructure.repositories;
 
 import java.util.List;
 
+import com.datantt.cuentabancaria.domain.dtos.TransferDTO;
 import org.bson.Document;
 
 import com.datantt.cuentabancaria.domain.dtos.BankAccountDto;
@@ -18,6 +19,8 @@ public interface BankAccountRepository {
 
     List<Document> getListTransaction(BankAccountDto bankAccountDTO);
 
-    Boolean createTransaction(TransactionDto transactionDTO);
+    Boolean createTransaction(TransactionDto transactionDTO, Boolean hasCommision);
+
+    Boolean createTransfer(TransferDTO transferDTO);
 
 }

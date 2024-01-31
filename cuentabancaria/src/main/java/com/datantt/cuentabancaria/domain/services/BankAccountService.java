@@ -5,6 +5,7 @@ import java.util.List;
 import com.datantt.cuentabancaria.domain.dtos.BankAccountDto;
 import com.datantt.cuentabancaria.domain.dtos.CustomerDto;
 import com.datantt.cuentabancaria.domain.dtos.TransactionDto;
+import com.datantt.cuentabancaria.domain.dtos.TransferDTO;
 
 public interface BankAccountService {
 
@@ -15,5 +16,7 @@ public interface BankAccountService {
     List<TransactionDto> getListTrasaction(BankAccountDto bankAccount);
 
     Boolean createTransaction(TransactionDto transactionDTO);
+
+    Boolean createTransfer(TransferDTO transferDTO);
 
 }
